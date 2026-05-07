@@ -209,7 +209,6 @@ To make these files visible to your AI models, you must "map" the staging direct
 ***Modify your docker-compose.yaml:***
 services:
    open-webui:
-   # ... other config ...
       volumes:
          - open-webui:/app/data
          - /home/peter/datasets/staging_cache:/app/data/STAGING_DATA:ro
