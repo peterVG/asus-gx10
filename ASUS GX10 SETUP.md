@@ -1,17 +1,17 @@
 # ASUS GX10 SETUP
 
 ## Gemma 4 31B model
-To test the performance and accuracy of ***OCR***, ***text classification***, and ***image classification***, the absolute best model for your Asus GX10 (Blackwell) setup is Gemma 4 31B (Dense).
+To test the performance and accuracy of ***OCR***, ***text classification***, and ***image classification***, the absolute best model for the Asus GX10 (Blackwell) setup is Gemma 4 31B (Dense).
 
-While you could use the smaller E4B or 26B MoE variants, the 31B Dense model is the flagship "frontier" version released in April 2026. It is specifically architected for the high-precision document and visual tasks you are targeting.
+While you could use the smaller E4B or 26B MoE variants, the 31B Dense model is the flagship "frontier" version released in April 2026. It is specifically architected for high-precision document and visual tasks.
 
-For your Asus GX10, don't compromise. Use the 31B Dense model at FP16 for the highest possible accuracy in OCR and classification. The Blackwell chip was built precisely for this level of unquantized multimodal performance.
+For the Asus GX10, don't compromise. Use the 31B Dense model at FP16 for the highest possible accuracy in OCR and classification. The Blackwell chip was built precisely for this level of unquantized multimodal performance.
 
 ### Gemma 4 31B for OCR
 
 ***Dense vs. MoE:*** While the 26B MoE is faster, the 31B Dense is the highest-quality open model in the Gemma family. For records management and legal-grade archival tasks, you want the raw reasoning power of every parameter.
 
-***Visual Fidelity:*** Running in FP16 ensures that OCR tasks don't suffer from the "bit-smearing" found in 4-bit/8-bit quantizations. When you set the visual token budget to 1120, the model sees document details at a "retinal" level. Unlike many VLMs that have a fixed number of image tokens, Gemma 4 allows you to set a budget from 70 to 1120 tokens. For high-accuracy OCR, you can set the budget to 1120, giving the model enough "retinal detail" to read small text and complex document layouts (like those in your Arkrim project).
+***Visual Fidelity:*** Running in FP16 ensures that OCR tasks don't suffer from the "bit-smearing" found in 4-bit/8-bit quantizations. When you set the visual token budget to 1120, the model sees document details at a "retinal" level. Unlike many VLMs that have a fixed number of image tokens, Gemma 4 allows you to set a budget from 70 to 1120 tokens. For high-accuracy OCR, you can set the budget to 1120, giving the model enough "retinal detail" to read small text and complex document layouts.
 
 ***OmniDocBench Scores:*** In recent 2026 benchmarks, the 31B Dense model achieved an edit distance of 0.131 (lower is better), significantly beating the 26B MoE (0.149) and the E4B (0.181).
 
@@ -36,7 +36,7 @@ Unlike macOS, the Ubuntu-based DGX distro requires explicit driver-to-container 
 Run the NVIDIA System Management Interface to ensure the GB10 is recognized and idling at the correct wattage.
 > nvidia-smi
 
-Note: Your Blackwell GPU should show 128GB of available VRAM.
+Note: The Blackwell GPU should show 128GB of available VRAM.
 
 ### Configure NVIDIA Container Toolkit
 Since you’ll likely run Open WebUI via Docker, ensure the GPU is "passed through" correctly.
